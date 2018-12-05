@@ -3,31 +3,30 @@
     <div class="container is-fluid">
       <div class="columns">
         <div class="column is-one-third">
-          <Card title="Server #1">
+          <Card title="E-commerce Front">
             <ServerState url="http://as-ecommerce-front.azurewebsites.net/"/>
           </Card>
-          <Card title="Server #2">
+          <Card title="E-commerce Front Api">
             <ServerState url="http://as-ecommerce-front-api.azurewebsites.net/documentation"/>
           </Card>
-          <Card title="Server #3">
-            <ServerState url="http://as-ecommerce-api.azurewebsites.qzdzqdqzd/en_US/"/>
-            <ServerState url="https://www.google.fr"/>
+          <Card title="E-commerce Backend Api">
+            <ServerState url="http://as-ecommerce-api.azurewebsites.net/admin"/>
           </Card>
         </div>
         <div class="column is-one-third">
-          <Card title="Server #1">
+          <Card title="Consumer Front Api">
+            <ServerState url="http://as-consumer-front.azurewebsites.net/"/>
           </Card>
-          <Card title="Server #2">
-          </Card>
-          <Card title="Server #3">
+          <Card title="Consumer API">
+            <ServerState url="http://as-consumer-api.azurewebsites.net/candidates"/>
           </Card>
         </div>
         <div class="column is-one-third">
-          <Card title="Server #1">
+          <Card title="Merchant Front">
+            <ServerState url="http://as-merchant-front.azurewebsites.net"/>
           </Card>
-          <Card title="Server #2">
-          </Card>
-          <Card title="Server #3">
+          <Card title="Mock API">
+            <ServerState url="http://as-mock-api.azurewebsites.net/"/>
           </Card>
         </div>
       </div>

@@ -1,7 +1,7 @@
 <template>
 <div>
   <div v-if="result"> <StatusLabel msg="is Up" color="is-success" /> </div>
-  <div v-else> <StatusLabel msg="is Down" color="is-warning" /> </div>
+  <div v-else> <StatusLabel msg="is Down" color="is-danger" /> </div>
 </div>
 </template>
 
@@ -29,7 +29,7 @@ export default {
   created() {
     api.get(this.url)
       .then((res) => {
-        this.result = res;
+        this.result = res.status;
       })
       .catch((e) => {
         this.errors.push(e);
@@ -40,12 +40,12 @@ export default {
     this.interval = setInterval(() => {
       api.get(this.url)
         .then((res) => {
-          this.result = res;
+          this.result = res.status;
         })
         .catch((e) => {
           this.errors.push(e);
         });
-    }, 20000);
+    }, 30000);
     console.log(this.result);
   },
 
