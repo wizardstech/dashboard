@@ -1,7 +1,17 @@
+.fullscreen-app{
+  height: 100vh;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.p-20{
+  padding-bottom: 20px;
+}
 .mt-10{
   margin-top:10px;
 }
-
+.ml-10{
+  margin-left:10px;
+}
 .mt-20{
   margin-top:10px;
 }
@@ -30,4 +40,32 @@ background: linear-gradient(to right, #ec2F4B, #009FFF);
 .body-bg{
   background: url('bg.png');
   height: 100vh;
+}
+.fixed-footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.footer-custom{
+  height: 60px;
+  background: white;
+  padding: 20px;
+}
+
+.board-avatar{
+  height: 30px;
+}
+.issue-key{
+  margin-left:10px;
+}
+.issue-sum{
+  margin-bottom:5px;
+  border-bottom: 1px solid #FEFEFE;
+}
+.team-name{
+  font-weight: 800;
+}
+.sprint{
+  font-style: italic;
 }

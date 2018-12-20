@@ -1,7 +1,7 @@
 <template>
-    <div class="body-bg" >
-        <Hero class="banner-bg has-shadow mb-20" title="Wizards" subtitle="Awesome Dashboard"/>
+    <div class="body-bg fullscreen-app">
         <Dashboard/>
+        <Footer/>
     </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
   name: 'home',
   components: {
     Dashboard: () => import('@/components/Dashboard.vue'),
-    Hero: () => import('@/components/Hero.vue'),
+    Footer: () => import('@/components/Footer.vue'),
   },
 };
 </script>
