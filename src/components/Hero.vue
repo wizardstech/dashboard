@@ -1,14 +1,9 @@
 <template>
-<section class="hero is-info is-small">
-  <div class="hero-body">
+<section class="is-info is-small">
     <div class="container has-text-centered">
       <p class="title">
         {{ title }}
       </p>
-      <p class="subtitle">
-        {{ subtitle }}
-      </p>
-    </div>
   </div>
 </section>
 </template>
@@ -18,7 +13,6 @@ export default {
   name: 'Hero',
   props: {
     title: String,
-    subtitle: String,
   },
 };
 </script>

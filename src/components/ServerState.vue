@@ -1,7 +1,7 @@
 <template>
 <div>
-  <div v-if="result"> <StatusLabel msg="is Up" color="is-success" /> </div>
-  <div v-else> <StatusLabel msg="is Down" color="is-danger" /> </div>
+  <span v-if="result">{{ name }}<StatusLabel msg="is Up" color="is-success" /> </span>
+  <span v-else>{{ name }}<StatusLabel msg="is Down" color="is-danger" /> </span>
 </div>
 </template>
 
@@ -17,6 +17,7 @@ export default {
 
   props: {
     url: String,
+    name: String,
   },
 
   data() {
@@ -26,18 +27,8 @@ export default {
     };
   },
 
-  created() {
-    api.get(this.url)
-      .then((res) => {
-        this.result = res.status;
-      })
-      .catch((e) => {
-        this.errors.push(e);
-      });
-  },
-
-  mounted() {
-    this.interval = setInterval(() => {
+  methods: {
+    isUp() {
       api.get(this.url)
         .then((res) => {
           this.result = res.status;
@@ -45,8 +36,17 @@ export default {
         .catch((e) => {
           this.errors.push(e);
         });
-    }, 30000);
-    console.log(this.result);
+    },
+  },
+
+  created() {
+    this.isUp();
+  },
+
+  mounted() {
+    this.interval = setInterval(() => {
+      this.isUp();
+    }, 20000);
   },
 
 };

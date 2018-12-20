@@ -1,5 +1,5 @@
 <template>
-  <div :class="`tag is-rounded ${color}`">
+  <div :class="`tag is-rounded ${color} ml-10`">
     <p>{{ msg }}</p>
   </div>
 </template>
