@@ -69,3 +69,10 @@ background: linear-gradient(to right, #ec2F4B, #009FFF);
 .sprint{
   font-style: italic;
 }
+.text-center{
+  text-align: center;
+}
+.loader-spin{
+  position: relative;
+  top: 25vh;
+}
